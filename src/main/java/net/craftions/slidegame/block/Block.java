@@ -34,8 +34,10 @@ public class Block {
     public void setComp(int x, int y){
         JLabel jl = new JLabel(this.getValue().toString());
         jl.setBackground(this.getColor());
-        jl.setFont(new Font("X-Files", Font.PLAIN, 25));
+        jl.setFont(new Font("X-Files", Font.PLAIN, 50));
+        jl.setHorizontalAlignment(SwingConstants.CENTER);
         jl.setBounds(x, y, 200, 200);
+        jl.setOpaque(true);
         this.comp = jl;
     }
 
