@@ -12,7 +12,7 @@ public class Block {
 
     private Integer value;
     private Color color;
-    private JLabel comp;
+    private JLabel comp = null;
     private Integer id;
 
 
@@ -32,7 +32,7 @@ public class Block {
     }
 
     public void setComp(int x, int y){
-        JLabel jl = new JLabel("<div style='text-align: center'>" + String.valueOf(this.getValue()) + "</div>");
+        JLabel jl = new JLabel("<html><div style='text-align: center;'>" + this.getValue() + "</div></html>");
         jl.setBackground(this.getColor());
         jl.setFont(new Font("X-Files", Font.PLAIN, 25));
         jl.setBounds(x, y, 200, 200);

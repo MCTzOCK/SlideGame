@@ -30,6 +30,8 @@ public class GameUI {
                 .setColor(Color.RED)
                 .build();
 
+        block.setComp(0,0);
+
         jf.add(block.getComponent());
 
         // jf.add(field);
