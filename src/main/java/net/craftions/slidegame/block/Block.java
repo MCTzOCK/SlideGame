@@ -32,7 +32,7 @@ public class Block {
     }
 
     public void setComp(int x, int y){
-        JLabel jl = new JLabel("<html><div style='text-align: center;'>" + this.getValue() + "</div></html>");
+        JLabel jl = new JLabel(this.getValue().toString());
         jl.setBackground(this.getColor());
         jl.setFont(new Font("X-Files", Font.PLAIN, 25));
         jl.setBounds(x, y, 200, 200);
