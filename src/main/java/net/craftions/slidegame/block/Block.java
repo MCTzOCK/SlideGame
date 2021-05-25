@@ -8,14 +8,19 @@ import java.awt.*;
 
 public class Block {
 
+    public static Integer currentID = 0;
+
     private Integer value;
     private Color color;
     private JLabel comp;
+    private Integer id;
 
 
     public Block(Integer value, Color color) {
         this.value = value;
         this.color = color;
+        id=currentID;
+        currentID++;
     }
 
     public void addToComponent(JComponent comp){
@@ -48,5 +53,9 @@ public class Block {
 
     public void setValue(Integer value) {
         this.value = value;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }
