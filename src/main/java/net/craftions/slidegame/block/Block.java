@@ -10,6 +10,7 @@ public class Block {
 
     private Integer value;
     private Color color;
+    private JLabel comp;
 
 
     public Block(Integer value, Color color) {
@@ -17,16 +18,20 @@ public class Block {
         this.color = color;
     }
 
-    public void addToComponent(JComponent comp, int x, int y){
-        comp.add(this.getComponent(x, y));
+    public void addToComponent(JComponent comp){
+        comp.add(this.getComponent());
     }
 
-    public JLabel getComponent(int x, int y){
-        JLabel jl = new JLabel(String.valueOf(this.getValue()));
+    public JLabel getComponent(){
+        return this.comp;
+    }
+
+    public void setComp(int x, int y){
+        JLabel jl = new JLabel("<div style='text-align: center'>" + String.valueOf(this.getValue()) + "</div>");
         jl.setBackground(this.getColor());
         jl.setFont(new Font("X-Files", Font.PLAIN, 25));
         jl.setBounds(x, y, 200, 200);
-        return jl;
+        this.comp = jl;
     }
 
     public Color getColor() {

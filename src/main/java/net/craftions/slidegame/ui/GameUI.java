@@ -30,10 +30,12 @@ public class GameUI {
                 .setColor(Color.RED)
                 .build();
 
-        jf.add(field);
+        jf.add(block.getComponent());
+
+        // jf.add(field);
     }
 
     public static void moveBlocks(){
-        blockArr
+
     }
 }
